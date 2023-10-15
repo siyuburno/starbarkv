@@ -1,6 +1,5 @@
 package com.nacos.consume.controller;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.nacos.consume.feign.api.ServiceProviderApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
