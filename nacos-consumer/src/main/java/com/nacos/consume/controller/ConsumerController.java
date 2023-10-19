@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
-@RequestMapping("/v1/test")
-public class CommonController {
+@RequestMapping("/v1/consumer")
+public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 

@@ -1,7 +1,7 @@
 package com.nacos.consume.feign.fallback;
 
 import com.nacos.consume.feign.api.ServiceProviderApi;
-import org.springframework.cloud.openfeign.FallbackFactory;
+import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 @Component
