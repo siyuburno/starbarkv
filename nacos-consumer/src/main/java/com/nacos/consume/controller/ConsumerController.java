@@ -1,5 +1,6 @@
 package com.nacos.consume.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.nacos.consume.feign.api.ServiceProviderApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,7 @@ public class ConsumerController {
     private ServiceProviderApi serviceProviderApi;
 
     @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @SentinelResource(value = "get")
     @ResponseBody
     public String test(@RequestParam(value = "param", required = false) String param, @RequestParam(value = "a", required = false) String a) {
         return serviceProviderApi.get(param);

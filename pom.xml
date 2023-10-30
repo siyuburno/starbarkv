@@ -16,6 +16,8 @@
     <name>starbarkv</name>
     <description>starbarkv</description>
     <properties>
+        <java.compiler.target>1.8</java.compiler.target>
+        <java.compiler.source>1.8</java.compiler.source>
         <java.version>1.8</java.version>
         <spring-cloud.version>2020.0.1</spring-cloud.version>
         <spring-cloud-alibaba-dependencies>2021.1</spring-cloud-alibaba-dependencies>
@@ -54,6 +56,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
