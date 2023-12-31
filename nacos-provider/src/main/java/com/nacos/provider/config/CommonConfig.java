@@ -19,14 +19,14 @@ public class CommonConfig {
     public NacosDataSource nacosFlowDataSource() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        return new NacosDataSource("172.20.10.2:8848", "SENTINEL_GROUP", appName+"-flow-rules", new JsonConverter(objectMapper, FlowRule.class));
+        return new NacosDataSource("127.0.0.1:8848", "SENTINEL_GROUP", appName+"-flow-rules", new JsonConverter(objectMapper, FlowRule.class));
     }
 
     @Bean
     public NacosDataSource nacosDegradeDataSource() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        return new NacosDataSource("172.20.10.2:8848", "SENTINEL_GROUP", appName+"-degrade-rules", new JsonConverter(objectMapper, DegradeRule.class));
+        return new NacosDataSource("127.0.0.1:8848", "SENTINEL_GROUP", appName+"-degrade-rules", new JsonConverter(objectMapper, DegradeRule.class));
     }
 
 }

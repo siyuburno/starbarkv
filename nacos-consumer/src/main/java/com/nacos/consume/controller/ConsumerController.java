@@ -26,4 +26,11 @@ public class ConsumerController {
         return serviceProviderApi.get(param);
     }
 
+    @RequestMapping(value = "/test/restTemplate", method = RequestMethod.GET)
+    @ResponseBody
+    public String testRestTemplate() {
+        return restTemplate.getForObject("http://service-provider/v1/test/postStr", String.class);
+    }
+
+
 }
